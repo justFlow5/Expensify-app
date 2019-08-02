@@ -10,7 +10,8 @@ const firebaseConfig = {
     appId: process.env.FIREBASE_APP_ID
   };
 
-
+  console.log("NODE_ENV",process.env.NODE_ENV)
+  console.log("API_KEY",process.env.APP_KEY)
 
 firebase.initializeApp(firebaseConfig);
 

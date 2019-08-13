@@ -7,8 +7,11 @@ import { startSetExpenses } from './actions/expenses';
 import { login, logout } from './actions/auth';
 import getVisibleExpenses from './selectors/expenses';
 import 'normalize.css/normalize.css';
+//import './styles/styles.scss';
+require('./styles/styles.scss');
 import 'react-dates/lib/css/_datepicker.css';
-import {firebase} from './firebase/firebase';
+import { firebase } from './firebase/firebase';
+import LoadingPage from './components/LoadingPage';
 
 
 const store = configureStore();
@@ -27,6 +30,7 @@ const renderApp = () => {
   }
 };
 
+ReactDOM.render(<LoadingPage />, document.getElementById('app'));
 
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {

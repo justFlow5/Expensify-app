@@ -30,7 +30,7 @@ module.exports = (env) => {
         test: /\.s?css$/,
         use: [
           // fallback to style-loader in development
-          isProduction ? MiniCssExtractPlugin.loader: 'style-loader',
+          isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
           { loader: 'css-loader', options: { sourceMap: true } },
           { loader: 'sass-loader', options: { sourceMap: true } }
       ]

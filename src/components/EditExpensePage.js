@@ -33,7 +33,7 @@ export class EditExpensePage extends React.Component {
             onClick={this.onRemove}>Remove Expense</button>
         </div>
         </div>
-      </div>
+      </div> 
     );
   }
 };
